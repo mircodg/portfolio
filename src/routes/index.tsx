@@ -26,6 +26,7 @@ import {
 	ItemTitle,
 } from "#/components/ui/item.tsx";
 import { Separator } from "#/components/ui/separator.tsx";
+import { Signature } from "#/components/ui/signature.tsx";
 import { TooltipProvider } from "#/components/ui/tooltip.tsx";
 import { links, profile, projects, stack, work } from "#/data/profile.ts";
 import { getCachedContributions } from "#/lib/get-cached-contributions.ts";
@@ -177,6 +178,8 @@ function Home() {
 							))}
 						</Rows>
 					</Section>
+
+					<Signature text="Mirco" fontSize={44} inView className="-mb-8" />
 
 					<footer className="flex items-center justify-between font-mono text-[11px] text-muted-foreground uppercase tracking-[0.08em]">
 						<span className="flex items-center gap-1.5">

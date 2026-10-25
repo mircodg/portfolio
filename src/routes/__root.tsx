@@ -30,17 +30,12 @@ export const Route = createRootRoute({
 			{ property: "og:type", content: "website" },
 		],
 		links: [
+			{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
 			{
 				rel: "icon",
 				type: "image/png",
 				sizes: "32x32",
 				href: "/favicon-32.png",
-			},
-			{
-				rel: "icon",
-				type: "image/png",
-				sizes: "192x192",
-				href: "/favicon-192.png",
 			},
 			{ rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
 			{ rel: "preconnect", href: "https://fonts.googleapis.com" },
