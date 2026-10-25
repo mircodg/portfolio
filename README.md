@@ -1,7 +1,3 @@
-# Portfolio v2
-
-Personal portfolio site, built with TanStack Start, shadcn/ui and Tailwind CSS.
-
 ## Stack
 
 - [TanStack Start](https://tanstack.com/start) with file-based routing (`src/routes`)
