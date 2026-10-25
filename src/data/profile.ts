@@ -19,7 +19,6 @@ export type WorkItem = {
 	org: string;
 	role: string;
 	period: string;
-	honors?: string;
 	current?: boolean;
 };
 
@@ -49,7 +48,6 @@ export const work: WorkItem[] = [
 		org: "University of Messina",
 		role: "BSc, Electronics and Computer Engineering",
 		period: "Sep 2021 – Dec 2024",
-		honors: "110/110 cum laude",
 	},
 ];
 
@@ -68,7 +66,7 @@ export const projects: Project[] = [
 		year: "2026",
 	},
 	{
-		name: "v0 Clone",
+		name: "v0 clone",
 		tagline: "prompt-to-app in disposable sandboxes",
 		href: "https://github.com/mircodg/v0-clone",
 		year: "2025",

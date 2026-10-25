@@ -1,3 +1,5 @@
+import { MoonIcon, SunIcon } from "lucide-react";
+
 import { Button } from "#/components/ui/button.tsx";
 import { cn } from "#/lib/utils.ts";
 
@@ -15,43 +17,18 @@ export function ThemeToggle({ className }: { className?: string }) {
 		}
 	}
 
+	// The icon shows the theme you'd switch to, so it's driven by the `dark`
+	// class rather than state and is correct from the first paint.
 	return (
 		<Button
 			variant="ghost"
-			size="xs"
+			size="icon-xs"
 			onClick={toggle}
 			aria-label="Toggle theme"
-			className={cn(
-				"-mr-2 gap-1.5 font-mono font-normal text-[11px] text-muted-foreground uppercase tracking-[0.08em]",
-				className,
-			)}
+			className={cn("-mr-1.5 text-muted-foreground", className)}
 		>
-			<ContrastGlyph />
-			<span className="dark:hidden">Dark</span>
-			<span className="hidden dark:inline">Light</span>
+			<MoonIcon className="size-3.5 dark:hidden" aria-hidden />
+			<SunIcon className="hidden size-3.5 dark:block" aria-hidden />
 		</Button>
-	);
-}
-
-// Drawn on a 16px grid so it stays crisp at small sizes; the filled half
-// swaps sides with the theme.
-function ContrastGlyph() {
-	return (
-		<svg
-			viewBox="0 0 16 16"
-			aria-hidden
-			className="size-3.5 shrink-0 transition-transform duration-300 ease-out motion-reduce:transition-none dark:rotate-180"
-		>
-			<title>Theme</title>
-			<circle
-				cx="8"
-				cy="8"
-				r="6.25"
-				fill="none"
-				stroke="currentColor"
-				strokeWidth="1.5"
-			/>
-			<path d="M8 1.75a6.25 6.25 0 0 1 0 12.5Z" fill="currentColor" />
-		</svg>
 	);
 }

@@ -80,13 +80,8 @@ function Home() {
 									</ItemMedia>
 									<ItemContent className="min-w-0 gap-0.5">
 										<ItemTitle className="text-[15px]">{item.org}</ItemTitle>
-										<ItemDescription className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px]">
+										<ItemDescription className="text-[13px]">
 											{item.role}
-											{item.honors && (
-												<Badge variant="outline" className="font-mono">
-													{item.honors}
-												</Badge>
-											)}
 										</ItemDescription>
 									</ItemContent>
 									<ItemActions
@@ -185,7 +180,7 @@ function Home() {
 
 					<footer className="flex items-center justify-between font-mono text-[11px] text-muted-foreground uppercase tracking-[0.08em]">
 						<span className="flex items-center gap-1.5">
-							<MapPinIcon className="size-3" aria-hidden />
+							<MapPinIcon className="size-3.5" aria-hidden />
 							<span>{profile.location}</span>
 							<span aria-hidden>·</span>
 							<LocalTime timeZone={profile.timeZone} />
