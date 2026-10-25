@@ -126,7 +126,7 @@ function Home() {
 						</Rows>
 					</Section>
 
-					<Section index="03" title="Stack">
+					<Section index="03" title="Tech Stack">
 						<Rows>
 							{stack.map(({ category, items }) => (
 								<Item key={category} size="sm" className="items-start px-0">
@@ -179,8 +179,6 @@ function Home() {
 						</Rows>
 					</Section>
 
-					<Signature text="Mirco" fontSize={44} inView className="-mb-8" />
-
 					<footer className="flex items-center justify-between font-mono text-[11px] text-muted-foreground uppercase tracking-[0.08em]">
 						<span className="flex items-center gap-1.5">
 							<MapPinIcon className="size-3.5" aria-hidden />
@@ -200,16 +198,21 @@ function Home() {
 function Intro({ children }: { children: ReactNode }) {
 	return (
 		<header className="flex flex-col gap-5">
-			<Avatar className="size-14 border">
+			{/* <Avatar className="size-14 border">
 				<AvatarImage src={profile.avatarUrl} alt={profile.name} />
 				<AvatarFallback>DG</AvatarFallback>
-			</Avatar>
+			</Avatar> */}
 
-			<div className="flex flex-col gap-1">
-				<h1 className="font-semibold text-[32px] leading-[38px] tracking-[-0.035em]">
-					{profile.name}
+			<div className="flex flex-col">
+				{/* The signature is the visible heading; the legal name stays in the
+				    h1 for screen readers and search engines. */}
+				<h1 className="mb-1">
+					<span className="sr-only">{profile.name}</span>
+					<span aria-hidden>
+						<Signature text="Domenico Germanà" fontSize={20} delay={0.3} />
+					</span>
 				</h1>
-				<p className="text-[15px] text-muted-foreground">Computer Engineer</p>
+				{/* <p className="text-[15px] text-muted-foreground">Computer Engineer</p> */}
 			</div>
 
 			<div className="flex flex-col gap-3 text-[15px] leading-[25px]">
@@ -241,7 +244,7 @@ function Section({
 					id={`section-${index}`}
 					className="shrink-0 font-mono text-[11px] text-muted-foreground uppercase tracking-[0.08em]"
 				>
-					{index} · {title}
+					{title}
 				</h2>
 				<Separator className="flex-1" />
 			</div>
