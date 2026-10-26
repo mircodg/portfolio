@@ -198,11 +198,7 @@ function Home() {
 function Intro({ children }: { children: ReactNode }) {
 	return (
 		<header className="flex flex-col gap-5">
-			{/* <Avatar className="size-14 border">
-				<AvatarImage src={profile.avatarUrl} alt={profile.name} />
-				<AvatarFallback>DG</AvatarFallback>
-			</Avatar> */}
-
+			
 			<div className="flex flex-col">
 				{/* The signature is the visible heading; the legal name stays in the
 				    h1 for screen readers and search engines. */}
