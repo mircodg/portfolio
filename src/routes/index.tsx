@@ -198,14 +198,13 @@ function Home() {
 function Intro({ children }: { children: ReactNode }) {
 	return (
 		<header className="flex flex-col gap-5">
-			
 			<div className="flex flex-col">
 				{/* The signature is the visible heading; the legal name stays in the
 				    h1 for screen readers and search engines. */}
 				<h1 className="mb-1">
 					<span className="sr-only">{profile.name}</span>
 					<span aria-hidden>
-						<Signature text="Domenico Germanà" fontSize={20} delay={0.3} />
+						<Signature text="Domenico Germanà" fontSize={17} duration={0.5} />
 					</span>
 				</h1>
 				{/* <p className="text-[15px] text-muted-foreground">Computer Engineer</p> */}
